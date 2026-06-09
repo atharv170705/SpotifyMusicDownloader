@@ -100,8 +100,8 @@ yt-dlp --version
 ### Clone the Repository
 
 ```bash
-git clone <https://github.com/atharv170705/SpotifyMusicDownloader.git>
-cd <SpotifyMusicDownloader>
+git clone https://github.com/atharv170705/SpotifyMusicDownloader.git
+cd SpotifyMusicDownloader
 ```
 
 ---
