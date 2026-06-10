@@ -8,6 +8,7 @@ The application:
 * Displays playlist metadata and tracks
 * Searches YouTube Music for matching songs
 * Downloads songs as MP3 files using yt-dlp and FFmpeg
+* Supports one-command deployment using Docker
 
 ---
 
@@ -20,7 +21,53 @@ The application:
 * ⚡ Fast React + Express architecture
 
 ---
-# Prerequisites
+
+## 🐳 Running with Docker (Recommended)
+
+Clone the repository:
+
+```bash
+git clone https://github.com/atharv170705/SpotifyMusicDownloader.git
+cd SpotifyMusicDownloader
+```
+
+Create a `.env` file inside the backend folder:
+
+```env
+PORT=5003
+CORS_ORIGIN=http://localhost:5173
+```
+
+Build and start the application:
+
+```bash
+docker compose up --build
+```
+
+Open:
+
+```text
+http://localhost:5173
+```
+
+The application will run without needing to manually install:
+
+- Node.js
+- FFmpeg
+- yt-dlp
+- Python
+
+Docker handles all required dependencies automatically.
+
+### Stopping the Application
+
+```bash
+docker compose down
+```
+
+---
+
+# Manual Installation (Without Docker)
 
 ## Node.js
 
@@ -192,23 +239,33 @@ Paste a Spotify playlist URL and start downloading songs.
 * yt-dlp
 * FFmpeg
 
+### DevOps
+
+* Docker
+* Docker Compose
+
 ---
 
 ## Project Structure
 
+## Project Structure
+
 ```bash
-spotify-playlist-downloader/
+SpotifyMusicDownloader/
+├── docker-compose.yml
+│
 ├── frontend/
+│   ├── Dockerfile
+│   ├── .dockerignore
 │   ├── src/
 │   ├── public/
-│   ├── .gitignore
 │   └── package.json
 │
 ├── backend/
-│   ├── controllers/
-│   ├── routes/
+│   ├── Dockerfile
+│   ├── .dockerignore
+│   ├── src/
 │   ├── .env
-│   ├── .gitignore
 │   └── package.json
 │
 ├── .gitignore
