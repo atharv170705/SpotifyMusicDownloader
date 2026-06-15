@@ -25,19 +25,19 @@ The application:
 
 ### 1. Choose Import Method
 
-![Home](screenshots/home.png)
+![Home](Screenshots/home.png)
 
 ### 2. Import Spotify Playlist
 
 Paste a public Spotify playlist URL to fetch playlist information and tracks.
 
-![Spotify Import](screenshots/spotify-import.png)
+![Spotify Import](Screenshots/spotify-import.png)
 
 ### 3. Browse Playlist Tracks
 
 View all songs in the playlist and select tracks to download.
 
-![Playlist View](screenshots/playlist-view.png)
+![Playlist View](Screenshots/playlist-view.png)
 
 ### 4. Download Songs
 
@@ -48,7 +48,7 @@ Tracks are automatically matched through YouTube Music and downloaded as MP3 fil
 
 Users can also paste a YouTube Music song URL and download tracks directly.
 
-![YouTube Music Import](screenshots/youtube-import.png)
+![YouTube Music Import](Screenshots/youtube-import.png)
 
 ---
 
