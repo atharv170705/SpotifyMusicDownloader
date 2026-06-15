@@ -21,6 +21,35 @@ The application:
 * ⚡ Fast React + Express architecture
 
 ---
+## Application Flow
+
+### 1. Choose Import Method
+
+![Home](screenshots/home.png)
+
+### 2. Import Spotify Playlist
+
+Paste a public Spotify playlist URL to fetch playlist information and tracks.
+
+![Spotify Import](screenshots/spotify-import.png)
+
+### 3. Browse Playlist Tracks
+
+View all songs in the playlist and select tracks to download.
+
+![Playlist View](screenshots/playlist-view.png)
+
+### 4. Download Songs
+
+Tracks are automatically matched through YouTube Music and downloaded as MP3 files.
+
+### 5. Direct YouTube Music Import
+
+Users can also paste a YouTube Music song URL and download tracks directly.
+
+![YouTube Music Import](screenshots/youtube-import.png)
+
+---
 
 ## 🐳 Running with Docker (Recommended)
 
