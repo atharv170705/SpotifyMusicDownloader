@@ -13,6 +13,13 @@ function PlaylistTracksPage() {
     const playlistUrl = location.state?.playlistUrl;
 
     useEffect(() => {
+        const key = `playlist-${playlistUrl}`;
+        const cached = localStorage.getItem(key);
+        if(cached) {
+            const data = JSON.parse(cached);
+            setPlaylist(data.playlistData);
+            setTracks(data.tracksData);
+        }
         fetchPlaylist();
     }, []);
 
@@ -24,13 +31,24 @@ function PlaylistTracksPage() {
                     url: playlistUrl
                 }
             );
-
-            setPlaylist({
+            console.log("Tracks from backend:", res.data.tracks.length);
+            const playlistData = {
                 name: res.data.playlist.name,
                 image: res.data.playlist.image
-            });
+            };
+            const tracksData = res.data.tracks;
 
-            setTracks(res.data.tracks);
+            
+            const key = `playlist-${playlistUrl}`;
+            const storageObj = {
+                playlistData,
+                tracksData
+            };
+            
+            localStorage.setItem(key, JSON.stringify(storageObj));
+            
+            setPlaylist(playlistData);
+            setTracks(tracksData);
         }
         catch (err) {
             console.error(err);

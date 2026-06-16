@@ -298,6 +298,12 @@ SpotifyMusicDownloader/
 │   ├── .env
 │   └── package.json
 │
+├── screenshots/
+│   ├── home.png
+│   ├── playlist-view.png
+│   ├── spotify-import.png
+│   └── youtube-import.png
+│
 ├── .gitignore
 └── README.md
 ```
